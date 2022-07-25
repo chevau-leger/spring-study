@@ -10,23 +10,12 @@ package com.echo.springframework.test.bean;
  */
 public class UserService {
 
-    private String name;
+    private String id;
 
-    public UserService() {
-    }
-
-    public UserService(String name) {
-        this.name = name;
-    }
+    private UserDao userDao;
 
     public void query() {
 
-        System.out.println("查询用户信息: " + name);
-    }
-
-    @Override
-    public String toString() {
-
-        return name;
+        System.out.println("查询用户信息：" + userDao.queryById(id));
     }
 }

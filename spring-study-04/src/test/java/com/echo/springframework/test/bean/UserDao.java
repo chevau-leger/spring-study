@@ -18,7 +18,12 @@ public class UserDao {
     static {
 
         users.put("10001", "jack");
-        users.put("10002","rose");
-        users.put("10003","tom");
+        users.put("10002", "rose");
+        users.put("10003", "tom");
+    }
+
+    public String queryById(String id) {
+
+        return users.get(id);
     }
 }
